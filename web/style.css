@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+}
+
+.hero{
+    background-image: url(2.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+
+    background-position: center;
+     overflow: hidden; 
+    position: relative;
+  } 
+
+  
+  
+.img{
+    height: 5vh;
+    width: 5vw;
+    border-radius: 50%;
+  background-clip:circle(50% at 50% 50%);
+}
+.intro{
+  display: grid;
+  place-content: center;
+    padding-top: 20vh;
+    font-weight: 900;
+    position: relative;
+ }
+
+.image{
+    padding-top: 4vmin;
+ }
+
+ /* button */
+
+ .container{ 
+ display: grid;
+ place-items: center;
+
+} 
+ .blue-button {
+    font-size: 1rem;
+    width: 10vw;
+    padding: 1rem 2rem ;
+    margin-top: 3rem;
+    /* margin-right: 50px; */
+    background-color: rgb(199, 86, 255);
+    color: #fff;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+   margin-left: auto;
+   margin-right: auto;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgb(255, 98, 255);  
+  }
+  
+  .blue-button:before, 
+  .blue-button:after {
+    position: absolute;
+    width: 140%;
+    height: 100%; 
+    left:-20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  } 
+  
+  .blue-button:before,
+  .blue-button:after
+   {
+    display: none;
+    background-image: 
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, rgb(255, 98, 255) 20%, transparent 30%),
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%),
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, rgb(255, 98, 255) 15%, transparent 20%),
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%),
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%),
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%),
+      radial-gradient(circle, rgb(255, 98, 255) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+  }
+  
+  .blue-button:before {
+    top: -75%;
+  }
+  .blue-button:after {
+    bottom: -75%;
+  }
+  
+  .blue-button:active {
+    transform: scale(0.9);
+    background-color: rgb(255, 98, 255);
+    box-shadow: 0 2px 25px rgba(187, 0, 0, 0.2);
+  }
+
+  /* FOR BUBBLE ANIMATION */
+.bubbles img{
+  height: 2rem;
+  width: 2rem;
+  opacity: 0.7;
+  animation: bubble 7s linear infinite;
+}
+
+@keyframes bubble {
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+   }
+
+   50%{opacity: 1;}
+
+   70%{ opacity: 0.4; }
+
+   100%{
+    transform: translateY(-98vh);
+    opacity: 0;
+   }
+}
+
+.bubbles img:nth-child(1){
+animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+  width: 3rem;
+  height: 3rem;
+  }
+  .bubbles img:nth-child(3){
+    animation-delay: 3s;
+    }
+    .bubbles img:nth-child(4){
+      animation-delay: 5s;
+      width: 1rem;
+      height: 1rem;
+      }
+      .bubbles img:nth-child(5){
+        animation-delay: 2s;
+        }
+        .bubbles img:nth-child(6){
+          animation-delay: 4.5s;
+          }
+          .bubbles img:nth-child(7){
+            animation-delay: 6s;
+            width: 3rem;
+            height: 3rem;
+            }
+            .bubbles img:nth-child(8){
+              animation-delay: 2s;
+              }
+              .bubbles img:nth-child(9){
+                animation-delay: 7s;
+                width: 4rem;
+                height: 4rem;
+                }
+                .bubbles img:nth-child(10){
+                  animation-delay: 3s;
+                  }
+                  .bubbles img:nth-child(11){
+                    animation-delay: 5s;
+                    width: 3rem;
+                    height: 3rem;
+                    }
+                    .bubbles img:nth-child(12){
+                      animation-delay: 2s;
+                      }
+                      .bubbles img:nth-child(13){
+                        animation-delay: 4.5s;
+                        width: 3rem;
+                        height: 3rem;
+                        }
+                        .bubbles img:nth-child(14){
+                          animation-delay: 6s;
+                          width: 2.5rem;
+                          height: 2.5rem;
+                          }
+
+.bubbles{
+    width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+position: absolute;
+bottom: -70px;
+} 
+
+.bubbles1{
+height: 5vh;
+width: 5vw;
+background-color: rgb(204, 52, 255);
+opacity: 0.7;
+border-radius: 50%;
+  }
+
+  /* FOR DROPDOWN BUTTON */
+  /* Dropdown Button */
+.dropbtn {
+  background-color: rgb(199, 86, 255);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: rgb(194, 75, 254);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+   display:inline-block;
+ 
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  font-size: 1rem;
+  display: none;
+  position: absolute;
+  background-color: #000000;
+ width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(165, 74, 250);}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+  
+/* FOR HEADER PHONE */
+
+ 
+.phone{
+position: relative;
+display: inline-block;
+
+}
+
+
+.info{
+  display: none;
+  position: absolute;
+  margin-top: -3rem;
+  margin-left: 0;
+}
+
+.info li p{
+  display: block;
+  color: #fff;
+  /* margin-left: 2rem; */
+  
+}
+.phone:hover .info{
+  display: block;
+ 
+
+}
+
+
+  @media screen and (max-width:700px) {
+    .container{ 
+        display: grid;
+      place-content: center;
+    
+    } 
+
+    .intro{
+      display: grid;
+      place-content: center;
+        padding-top: 10vh;
+        font-weight: 700;
+        position: relative;
+        margin-left: 1rem;
+     }
+
+    .blue-button {
+        font-size: 1rem;
+        width: 20vw;
+        height: 6vw;
+        padding: 1rem ;
+        margin-top: 1rem;
+        /* margin-right: 50px; */
+        background-color: rgb(199, 86, 255);
+        color: #fff;
+        border-radius: 5px;
+        border:none;
+        cursor: pointer;
+       margin-left: auto;
+       margin-right: auto;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgb(255, 98, 255);  
+      }
+    
+  }
+
+  /* MEDIA QUERIES */
+
+  @media screen and (min-width:1450px) {
+    .blue-button {
+      font-size: 1rem;
+      width: 10vw;
+      padding: 1rem 2rem ;
+      margin-top: 3rem;
+      background-color: rgb(199, 86, 255);
+      color: #fff;
+      border-radius: 5px;
+      border:none;
+      cursor: pointer;
+     margin-left: auto;
+     margin-right: auto;
+      transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+      box-shadow: 0 2px 25px rgb(255, 98, 255);
+    }
+  }
+ 
+  
+
+
+
+
+
+
+
+
